@@ -1,4 +1,6 @@
 #!/bin/bash
+curl -s -b "session=...." https://adventofcode.com/2023/day/3/input |
+
 awk   '
 BEGIN {emp=".";p="";sum=0}
 {
@@ -37,4 +39,4 @@ while(match(r,/[0-9]+/)){
 p=$0;
 }
 END {for(nm in am) print am[nm]":"nm;print "sum: "sum}
-' test3.txt
+' 
