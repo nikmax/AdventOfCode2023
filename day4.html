@@ -5,6 +5,20 @@
 	<link rel="stylesheet"
 		  href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300'>
 	<link rel="stylesheet" href="aoc2023.css">
+	<script>
+		window.onload = function(){
+			var s=document.getElementById("sid");
+			var c=document.getElementById("code");
+			var b=document.getElementById("button");
+			function get_sid(e){
+				c.innerText=s.value;s.value="";s.focus();e.preventDefault();}
+			function click_button(e){
+				if(e.key==="Enter"){e.preventDefault();b.click();}} 
+			b.addEventListener("click", get_sid);
+			s.addEventListener("keypress",click_button); 
+			s.focus();
+		}
+	</script>
 </head>
 <body>
 	<h1>
